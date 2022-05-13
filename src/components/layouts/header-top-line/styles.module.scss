@@ -1,0 +1,71 @@
+@import '../../../assets/scss/helpers/grid.scss';
+@import '../../../assets/scss/helpers/variables.scss';
+@import '../../../assets/scss/helpers/helpers.scss';
+
+.wrapper {
+  @include wrapper();
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightBox {
+  min-height: 47px;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  @include active();
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+  text-transform: uppercase;
+  margin-right: 62px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.buttonWrapper {
+  min-width: 167px;
+  position: relative;
+}
+
+.menuWrapper {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.menuButton {
+  @include reset-button();
+  @include active();
+  border: 1px solid #E6E6E6;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 10px 16px;
+  width: 100%;
+  top: 100%;
+}
+
+.hashAddress {
+  :global {
+    .smallPhotoWithText__hashAddress {
+      max-width: 94px;
+    }
+  }
+}
+
+.arrowBottom {
+  display: flex;
+  align-items: center;
+  @include reset-button();
+  @include active();
+
+  .arrowBottomImg {
+    padding: 8px 0 8px 8px;
+  }
+}
